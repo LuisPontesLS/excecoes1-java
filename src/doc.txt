@@ -1,0 +1,13 @@
+1 CRIAÇÃO DE DIRETÓRIO NO GITHUB E CONEXÃO COM O PROGRAMA NA MÁQUINA
+-----------------------------------------------------------------------------
+2 CRIAÇÃO DA SUBCLASSE 'RESERVA'
+-----------------------------------------------------------------------------
+REGRA DE NEGÓCIO:
+A data de chec-in e check-out devem ser depois da data atual. 
+A data de saída não pode ser anterior a data de entrada
+TESTE
+1 Entrar com dados corretos de uma reserva
+2 Atualizar datas com dados também corretos
+3 Cadastrar com dados incorretos (data de saída anterior a data de entrada)
+
+Vídeo 148 - 13:20
