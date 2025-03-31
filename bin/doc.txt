@@ -49,4 +49,15 @@ TESTE
 FAZER UM COMMIT:
 Na pasta do projeto (no pc)
 git status
+	Mostra as mudanças que ocorreram e não estão na lista de "subir"
+	
+git add .
+	Passa todas as mudanças para a área de ....
+	(Não mostra nada )
+	
+$ git commit -m "Solucao ruim"
+
+$ git push
+
+
 Vídeo 
