@@ -1,6 +1,41 @@
+***Tentar refazer, entendendo os passos antes***
+
 1 CRIAÇÃO DE DIRETÓRIO NO GITHUB E CONEXÃO COM O PROGRAMA NA MÁQUINA
+No GitHub logado:
+Start a project > nomeia-exemplo-1 > gitignore: java > create repository
+O projeto é criado com o arquivo .gitignore
+
+O projeto já precisa estar criado na IDE criado
+Pelo computador (windows) vai até a pasta do projeto, abre-se o Git Bash:
+$ git init  
+inicia um positório de versionamento local. Isso cri auma pasta "fantasma" 'git'
+
+De volta ao GitHub, clona o link HTTP
+
+De volta o terminal Git Bash vai associar o repositório local ao repositório remoto
+$ git remote add origin https://link.clonado.do.projeto
+Isso associa os dois.
+Para atuazlizar o repositório local ao repositório remoto:
+$git pull origin main
+Isso puxa tudo que está no repossitório remoto e coloca no projeto
+ Para ver se deu certo, vai na pasta do projeto e vê se apareceu o arquivo '.gitignore'
+(que estava no GitHub)
+
+RETOMAR A ANÁLISE DA CLASSE PRINCIPAL COM O DEEPSEEK
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate checkIn = LocalDate.parse(sc.next(), formatter); // Lê como LocalDate direto!
+
 -----------------------------------------------------------------------------
 2 CRIAÇÃO DA SUBCLASSE 'RESERVA'
+	ATRIBUTOS:
+	FORMATAÇÃO DE DATA
+	CONSTRUTOR
+	MÉTODOS GET: todos
+	MÉTODOS SET: apenas nº quarto
+	MÉTODO DURACAO()
+	MÉTODO ATUALIZARDATAS()
+	MÉTODO TOSTRING() (com data usando formato escolhido)
+		
 -----------------------------------------------------------------------------
 REGRA DE NEGÓCIO:
 A data de chec-in e check-out devem ser depois da data atual. 
@@ -10,4 +45,8 @@ TESTE
 2 Atualizar datas com dados também corretos
 3 Cadastrar com dados incorretos (data de saída anterior a data de entrada)
 
-Vídeo 148 - 13:20
+
+FAZER UM COMMIT:
+Na pasta do projeto (no pc)
+git status
+Vídeo 

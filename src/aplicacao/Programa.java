@@ -25,16 +25,12 @@ public class Programa {
 		Date dataDeCheckOut = dataFormatada.parse(sc.next());
 		// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-		// REGRASS DE NEGÓCIO, (VERIFICAÇÃO DE ERRO) >->->->->->->->->
-
 		// CONVERTER Date PARA LocalDate
-		LocalDate checkIn = dataDeCheckIn.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // <----- Conversão
-																									// de Date para
-																									// LocalDate
-		LocalDate checkOut = dataDeCheckOut.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // <-----
-																										// Conversão de
-																										// Date para
-																										// LocalDate
+		// 1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>1>
+		// A ENTRADA USA VERSÕES 'DATE' ANTIGAS. POR ISSO A CONVERSÃO DESSE BLOCO
+		LocalDate checkIn = dataDeCheckIn.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // Convers checkIn
+		LocalDate checkOut = dataDeCheckOut.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // ConvercheckOut
+		// 1<1<1<1<1<1<1<11<1<1<1<1<1<1<11<1<1<1<1<1<1<11<1<1<1<1<1<1<11<1<1<1<1<1<1<11<1<1<1<1<1<1<11<1<1<1<1<1<
 
 		// VERIFICAR SE A DATA DE CHECK-OUT NÃO É POSTERIOR AO CHECK-IN
 		if (!checkOut.isAfter(checkIn)) {// before?
@@ -59,21 +55,13 @@ public class Programa {
 			LocalDate novoCheckOut = novaDataDeCheckOut.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // <-----
 																													// Conversão
 
-			// Verificar se a nova data de check-out é posterior à nova data de check-in
-			if (!novoCheckOut.isAfter(novoCheckIn)) {
-				System.out.println("Erro na atualização: Data do check-out deve ser posterior à data de check-in");
+			String erroString = novaReserva.atualizarDatas(novoCheckIn, novoCheckOut);
+			if (erroString != null) {
+				System.out.println("Erro na reserva: " + erroString);
+
 			} else {
-
-				// AS DATAS DEVEM SER FUTURAS --
-				LocalDate dataAtual = LocalDate.now();
-				if (novoCheckIn.isBefore(dataAtual) || novoCheckOut.isBefore(dataAtual)) {
-					System.out.println("Erro: As datas devem ser futuras.");
-				} else {
-			        novaReserva.atualizarDatas(novoCheckIn, novoCheckOut);
-			        System.out.println("Reserva atualizada com sucesso:");
-			        System.out.println(novaReserva);
-				}// -----------------------------
-
+				System.out.println("Reserva atualizada com sucesso:");
+				System.out.println(novaReserva);
 			}
 			// -----------------------------------------------------
 		}
