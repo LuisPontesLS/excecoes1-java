@@ -2,7 +2,7 @@
 
 1 CRIAÇÃO DE DIRETÓRIO NO GITHUB E CONEXÃO COM O PROGRAMA NA MÁQUINA
 No GitHub logado:
-Start a project > nomeia-exemplo-1 > gitignore: java > create repository
+Start a project [não projeto]> nomeia-exemplo-1 > gitignore: java > create repository
 O projeto é criado com o arquivo .gitignore
 
 O projeto já precisa estar criado na IDE criado
@@ -14,7 +14,8 @@ De volta ao GitHub, clona o link HTTP
 
 De volta o terminal Git Bash vai associar o repositório local ao repositório remoto
 $ git remote add origin https://link.clonado.do.projeto
-Isso associa os dois.
+Isso associa os dois (sem mostrar nada na tela)git.
+
 Para atuazlizar o repositório local ao repositório remoto:
 $git pull origin main
 Isso puxa tudo que está no repossitório remoto e coloca no projeto
@@ -60,4 +61,4 @@ $ git commit -m "Solucao ruim"
 $ git push
 
 
-Vídeo 
+Vídeo 150 - Do início
